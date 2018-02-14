@@ -9,7 +9,7 @@ W = tf.placeholder(tf.float32)
 hypothesis = X * W
 
 #cost/loss function
-cost = tf.reduce_mean(tf.square(hypothesis - y))
+cost = tf.reduce_mean(tf.square(hypothesis - Y))
 
 #Launch the graph in a session.
 sess = tf.Session()
