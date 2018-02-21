@@ -9,7 +9,7 @@ W = tf.Variable(5.)
 hypothesis = X * W
 
 # Manual gradient
-gradient = tf.reduce_mean((W * X - ) * X) * 2
+gradient = tf.reduce_mean((W * X - Y) * X) * 2
 
 # cost/loss function
 cost = tf.reduce_mean(tf.square(hypothesis -Y))
@@ -23,7 +23,7 @@ apply_gradients = optimizer.apply_gradients(gvs)
 
 # Launch the graph in a session
 sess = tf.Session()
-sess.run(tf.global_variables_initailizer())
+sess.run(tf.global_variables_initializer())
 
 for step in range(100):
     print(step, sess.run([gradient, W, gvs]))
